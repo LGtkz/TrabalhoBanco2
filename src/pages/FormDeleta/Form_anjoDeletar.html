@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulário de Anjo</title>
+    <link rel="stylesheet" href="../../styles/2css.css">
+</head>
+<body>
+    <div class="wrapper-form">
+        <h1 >Deletar Anjo</h1>
+        <form id="deletaAnjo" class="form-grid">
+            <div class="input-field">
+                <label for="id">ID:</label>
+                <input type="number" id="id" name="id" min="1">
+            </div>       
+               <div class="input-field full-width">
+            <button type="submit" id="criar">Deletar</button>
+                
+            </div>
+            <button type="button" onclick="location.href='Form_anjo.html'" class="back-button">←</button>
+        </form>
+    </div>
+    <script src="../../scripts/server/deletaAnjo.js"></script>
+</body>
+</html>

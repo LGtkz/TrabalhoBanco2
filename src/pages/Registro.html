@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Página</title>
+    <link rel="stylesheet" href="../styles/CSS.css">
+  </head>
+  <body>
+ 
+    <div class="wrapper">
+      <form id="registro">
+        <h2>Registro</h2>
+        <div class="input-field">
+          <input type="text" name="username" required>
+          <label>Nome</label>
+        </div>
+        <div class="input-field">
+          <input type="password" name="password" required>
+          <label>Senha</label>
+        </div>
+        <p id="errorMsg"></p>
+             <button type="submit" id="id_registro">Registrar</button>
+             <!-- <button onclick="window.location.href='../../index.html'" class="back-button">←</button> -->
+      </form>
+    </div>
+    <script src="../scripts/server/registro.js"></script>
+  </body>
+</html>

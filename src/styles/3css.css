@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(35, 19, 4);
+    overflow: hidden;
+    background: url("../img/image.jpg") no-repeat center center fixed;
+    background-size: cover;
+    -webkit-backdrop-filter: blur;
+    backdrop-filter: blur;
+    min-height: 100vh;
+}
+
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 50px;
+    z-index: 10;
+}
+
+.navbar-links ul {
+    list-style-type: none;
+    display: flex;
+    gap: 40px;
+}
+
+.navbar-links ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 0.35em;
+    padding: 10px 20px;
+    font-family: 'Arial';
+}
+
+.navbar-links ul li a:hover {
+    color: #b94d1b;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 100%;
+    height: 80vh;
+    max-height: 100vh; /* Limita a altura máxima para caber na tela */
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.item {
+    border: 2px solid rgb(130, 78, 0);
+    width: 20vw;
+    height: 45vh; /* Ajusta a altura para caber na tela */
+    max-width: 300px;
+    max-height: 400px;
+    border-radius: 15px;
+    background-position: center;
+    background-size: cover;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.item.active {
+    padding: 0;
+    width: 25vw;
+    height: 70vh; /* Ajusta a altura do card do meio */
+    max-width: 350px;
+    max-height: 400px;
+    display: flex;
+    opacity: 1;
+    margin: 20px;
+    pointer-events: auto;
+}
+
+.item .content {
+    text-align: center;
+    color: #eee;
+    font-family: system-ui;
+}
+
+.content {
+    width: 80%;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    position: relative;
+    z-index: 1;
+}
+
+.content .name {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.content button {
+    width: 80px;
+    height: 30px;
+    margin-top: 10px;
+    padding: 8px 16px;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: rgb(130, 78, 0);
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.content button:hover {
+    width: 88px;
+    height: 33px;
+    background: #e8b304;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    bottom: -20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.button button {
+    width: 50px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(130, 78, 0);
+    transition: 0.3s;
+}
+
+.button button:hover {
+    width: 55px;
+    height: 44px;
+    background: #e8b304;
+    color: #ffffff;
+}
+
+.item.prev, .item.next {
+    display: flex;
+}
+
+/* Media Queries para Responsividade */
+
+/* Telas menores que 1024px (Tablets) */
+@media (max-width: 1024px) {
+    .container {
+        height: 75vh;
+        max-height: 100vh;
+    }
+
+    .item {
+        width: 28vw;
+        height: 40vh;
+    }
+
+    .item.active {
+        width: 32vw;
+        height: 45vh;
+    }
+
+    .content .name {
+        font-size: 1.8em;
+    }
+}
+
+/* Telas menores que 768px (Celulares) */
+@media (max-width: 768px) {
+    .container {
+        height: 70vh;
+        max-height: 100vh;
+    }
+
+    .item {
+        width: 35vw;
+        height: 35vh;
+    }
+
+    .item.active {
+        width: 40vw;
+        height: 40vh;
+    }
+
+    .content .name {
+        font-size: 1.5em;
+    }
+}
+
+/* Telas menores que 480px (Celulares pequenos) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0;
+        height: 65vh;
+        max-height: 100vh;
+    }
+
+    .item {
+        width: 40vw;
+        height: 30vh;
+    }
+
+    .item.active {
+        width: 45vw;
+        height: 35vh;
+    }
+
+    .content .name {
+        font-size: 0.5em;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 0;
+        height: 65vh;
+        max-height: 100vh;
+        width: 150%;
+    }
+
+    .item {
+        width: 30vw;
+        height: 20vh;
+    }
+
+    .item.active {
+        width: 35vw;
+        height: 25vh;
+    }
+
+    .content .name {
+        font-size: 0.5em;
+    }
+
+    .content button {
+        font-size: 0.5em;
+        align-items: center;
+        text-align: center;
+        width: 50px;
+        height: 20px;
+    }
+}
+

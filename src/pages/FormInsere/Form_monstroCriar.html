@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulário de Monstro</title>
+    <link rel="stylesheet" href="../../styles/2css.css">
+</head>
+<body>
+    <div class="wrapper-form">
+        <h1 >Criar Monstro</h1>
+        <form class="form-grid" id="insereMonstro">
+            <div class="input-field">
+                <label for="id">ID:</label>
+                <input type="number" id="id" name="id" min="1">
+            </div>
+            <div class="input-field">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" maxlength="100" required>
+            </div>
+            <div class="input-field">
+                <label for="forca">Força:</label>
+                <input type="number" id="forca" name="forca" min="0" required>
+            </div>
+            <div class="input-field">
+                <label for="tipo">Tipo:</label>
+                <input type="text" id="tipo" name="tipo" maxlength="50">
+            </div>
+            <div class="input-field">
+                <label for="transformacao">Transformação:</label>
+                <input type="text" id="transformacao" name="transformacao" maxlength="50">
+            </div>
+            <div class="input-field">
+                <label for="casa">Casa:</label>
+                <input type="text" id="casa" name="casa" maxlength="100" required>
+            </div>
+            <div class="input-field full-width">
+                <button type="submit" id="criar">Criar</button>
+            </div>
+            <button type="button" onclick="location.href='Form_monstro.html'" class="back-button">←</button>
+        </form>
+    </div>
+    <script src="../../scripts/server/insereMonstro.js"></script>
+</body>
+</html>

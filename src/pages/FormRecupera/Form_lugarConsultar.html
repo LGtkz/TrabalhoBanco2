@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulário de Lugares</title>
+    <link rel="stylesheet" href="../../styles/2css.css">
+</head>
+<body>
+    <div class="wrapper-form">
+        <h1 >Consultar Lugar</h1>
+        <form class="form-grid" id="buscaLugar">
+            <div class="input-field">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div class="input-field">
+                <label for="descricao">Descrição:</label>
+                <textarea id="descricao" name="descricao" rows="3" required></textarea>
+            </div>
+
+            <div class="input-field full-width">
+                <button type="submit" id="criar">Consultar</button>
+            </div>
+            <button type="button" onclick="location.href='Form_lugar.html'" class="back-button">←</button>
+        </form>
+    </div>
+    <script src="../../scripts/server/consultaLugar.js"></script>
+</body>
+</html>

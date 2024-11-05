@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulário de Arma</title>
+    <link rel="stylesheet" href="../../styles/2css.css">
+</head>
+<body>
+    <div class="wrapper-form">
+        <h1 >Deletar Arma</h1>
+        <form id="deletaArma" class="form-grid">
+            
+            <div class="input-field">
+                <label for="id">ID:</label>
+                <input type="number" id="id" name="id" min="1" required>
+            </div>
+
+            <div class="input-field full-width">
+                <button type="submit" id="criar">Deletar</button>
+                
+            </div>
+            <button type="button" onclick="location.href='Form_arma.html'" class="back-button">←</button>
+        </form>
+    </div>
+    <script src="../../scripts/server/deletaArma.js"></script>
+</body>
+</html>
